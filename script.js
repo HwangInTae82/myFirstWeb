@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 바깥 클릭하면 드롭다운 닫기
+    // 주석 수정했어요
     document.addEventListener("click", function (event) {
         if (!categoryButton.contains(event.target) && !categoryList.contains(event.target)) {
             categoryList.style.display = "none";
