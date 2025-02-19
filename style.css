@@ -1,0 +1,803 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+#wrap {
+    width: 1020px;
+    height: 1462px;
+    margin: 0 auto;
+}
+
+/* top */
+#top {
+    background: #f0f0f0;
+}
+
+#top-bar {
+    display: flex;
+    font-size: 11px;
+    width: 1020px;
+    height: 36px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#left-top-bar {
+    display: flex;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+#right-top-bar {
+    display: flex;
+    padding-right: 10px;
+    gap: 10px;
+}
+
+/* header */
+#header {
+    width: 1020px;
+    height: 115px;
+    margin: 0 auto;
+    display: flex;
+}
+
+#category-btn {
+    width: 110px;
+    height: 112px;
+    background: url(./img/coupang_category_btn.png) no-repeat center/contain;
+    position: relative;
+}
+
+#category-btn-list {
+    display: none;
+    position: absolute;
+    top: 112px;
+    width: 165px;
+    z-index: 1000;
+    background: white;
+    border: 0.5px solid rgb(182, 182, 182);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+#category-btn:hover #category-btn-list {
+    display: block;
+}
+
+#category-btn-list li:nth-child(1) {
+    margin-top: 10px;
+}
+/* 카테고리 버튼 리스트 호버했을때 스타일 적용 */
+#category-btn-list > li > a:hover {
+    color: #6486ec;
+    text-decoration: underline;
+    font-weight: bold;
+
+}
+#depthul >li >a:hover {
+    color: #6486ec;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.third-depth-list >li >a:hover {
+    color: #6486ec;
+    text-decoration: underline;
+    font-weight: bold;
+}
+#category-btn-list>li {
+    padding: 5px 10px;
+    font-size: 12px;
+    display: flex;
+}
+/* depth */
+.depth {
+    display: none;
+    background: url("https://image9.coupangcdn.com/image/displayitem/displayitem_3677dc42-3298-4793-a9e0-172088a9b5a5.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    width: 591px;
+    height: 620px;
+    position: absolute;
+    top: 0px;
+    left: 164px;
+    z-index: 1000;
+    border: 1px solid rgb(223, 223, 223);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    
+}
+
+
+/* depthul 스타일 수정 */
+#depthul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 157px;
+}
+#depthul a {
+    padding: 9px 0px 0px 20px;
+    width: 100%;
+    height: 37px;
+}
+
+/* second-depth-list 스타일 수정 */
+.second-depth-list {
+    display: flex;
+    width: 157px;
+    height: 25px;
+    top: 0px;
+    background: white;
+    min-width: 150px;
+}
+
+/* third-depth-list 스타일 수정 */
+.third-depth-list {
+    display: none;
+    position: absolute;
+    top:0;
+    left: 157px;
+    width: 100px;
+    height: 100%;
+    min-width: 150px;
+    border-left: 1px solid #e0e0e0; 
+}
+.third-depth-list li{
+    display: flex;
+    width: 157px;
+    height: 25px;
+}
+
+/* 호버되는것에따른 배경이미지 바꾸기*/
+#fession:hover .depth {
+    display: block;
+    background-size: 530px 420px;
+
+    
+}
+#beauty:hover .depth {
+    display: block;
+    background: url("https://image8.coupangcdn.com/image/displayitem/displayitem_8cb96fbe-3b28-47ab-9e35-956f809565a8.jpg") no-repeat;
+    background-size: 530px 420px;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+}
+#child:hover .depth {
+    display: block;
+    background: url("https://image6.coupangcdn.com/image/displayitem/displayitem_97f1cbff-bc7f-45e9-b4eb-c845136f7f7f.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#food:hover .depth {
+    display: block;
+    background: url("https://image9.coupangcdn.com/image/displayitem/displayitem_8670e944-6ba8-47ed-b997-1bdde88d6c1d.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#kitchen:hover .depth {
+    display: block;
+    background: url("https://image9.coupangcdn.com/image/displayitem/displayitem_294d379a-2322-4e7e-a7dc-d2cdf3245114.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#life:hover .depth {
+    display: block;
+    background: url("https://image6.coupangcdn.com/image/displayitem/displayitem_9d95b024-d38e-41a0-9751-4b0a6c07620a.png") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#interior:hover .depth {
+    display: block;
+    background: url("https://image7.coupangcdn.com/image/displayitem/displayitem_a3c402f0-fecf-479a-b554-69b075a06200.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#digital:hover .depth {
+    display: block;
+    background: url("https://image10.coupangcdn.com/image/displayitem/displayitem_40cee5b4-4139-4cbb-8d15-f429ad8b41b2.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#sport:hover .depth {
+    display: block;
+    background: url("https://image7.coupangcdn.com/image/displayitem/displayitem_0eac110b-64e2-4a0d-9591-7d643a49a5c5.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#car:hover .depth {
+    display: block;
+    background: url("https://image8.coupangcdn.com/image/displayitem/displayitem_cd806a25-fdec-41f3-8657-67a70e8282b8.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#book:hover .depth {
+    display: block;
+    background: url("https://image10.coupangcdn.com/image/displayitem/displayitem_2cbeac82-b471-4caa-8788-7cb15bf14e29.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#hooby:hover .depth {
+    display: block;
+    background: url("https://image8.coupangcdn.com/image/displayitem/displayitem_5b2d6289-e60c-42bd-ae43-c54cac78a504.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#office:hover .depth {
+    display: block;
+    background: url("https://image8.coupangcdn.com/image/displayitem/displayitem_20179bb9-cda9-497f-bb16-abac339a12cd.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#dog:hover .depth {
+    display: block;
+    background: url("https://image7.coupangcdn.com/image/displayitem/displayitem_51189121-e024-4881-9a26-30c871db7e99.png") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#health:hover .depth {
+    display: block;
+    background: url("https://image10.coupangcdn.com/image/displayitem/displayitem_595e990e-a619-4b1c-8b89-d3fbc0fd981a.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#travel:hover .depth {
+    display: block;
+    background: url("https://image7.coupangcdn.com/image/displayitem/displayitem_609f9b7f-5d10-4ae5-a059-2fa8e61d9055.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+#theme:hover .depth {
+    display: block;
+    background: url("https://image9.coupangcdn.com/image/displayitem/displayitem_ed6f20da-21ed-4dc4-ac0b-c10397114176.jpg") no-repeat;
+    background-size: contain;
+    background-position: right bottom;  /* 이미지가 오른쪽 아래 끝에 정렬됨 */
+    background-color: white;  /* 남는 공간을 하얀색으로 채움 */
+    background-size: 530px 420px;
+
+}
+    
+
+.second-depth-list:hover .third-depth-list {
+    display: block;
+}
+
+
+#fession-img{
+    width: 500px;
+}
+
+/*카테고리 버튼 아이콘*/
+#icon-fession {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -32px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-beauty {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -31px -116px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-child {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -32px -158px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-food {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -31px -200px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 9px;
+    display: inline-block;
+}
+
+#icon-kitchen {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -28px -286px;
+    width: 22px;
+    height: 18px;
+    margin: 0px 7px;
+    display: inline-block;
+}
+
+#icon-life {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -33px -327px;
+    width: 12px;
+    height: 18px;
+    margin: 0px 12px;
+    display: inline-block;
+}
+
+#icon-interior {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -370px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-digital {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -414px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-sport {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -31px -454px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-car {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -790px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-book {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -581px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-hooby {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -747px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-office {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -496px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-dog {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -29px -538px;
+    width: 20px;
+    height: 18px;
+    margin: 0px 9px;
+    display: inline-block;
+}
+
+#icon-health {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -875px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-travel {
+    background: url(./img/pc_gnb_icon_ver10.png) no-repeat -30px -621px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#icon-theme {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -29px -915px;
+    width: 20px;
+    height: 18px;
+    margin: 0px 9px;
+    display: inline-block;
+}
+
+#icon-sale {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -30px -999px;
+    width: 18px;
+    height: 18px;
+    margin: 0px 10px;
+    display: inline-block;
+}
+
+#category-btn-list li:nth-child(1):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -32px
+}
+
+#category-btn-list li:nth-child(2):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -223px -116px;
+}
+
+#category-btn-list li:nth-child(3):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -224px -158px;
+}
+
+#category-btn-list li:nth-child(4):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -223px -200px;
+}
+
+#category-btn-list li:nth-child(5):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -220px -286px;
+}
+
+#category-btn-list li:nth-child(6):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -225px -327px;
+}
+
+#category-btn-list li:nth-child(7):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -370px;
+}
+
+#category-btn-list li:nth-child(8):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -414px;
+}
+
+#category-btn-list li:nth-child(9):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -223px -454px;
+}
+
+#category-btn-list li:nth-child(10):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -790px;
+}
+
+#category-btn-list li:nth-child(11):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -581px;
+}
+
+#category-btn-list li:nth-child(12):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -747px;
+}
+
+#category-btn-list li:nth-child(13):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -496px;
+}
+
+#category-btn-list li:nth-child(14):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -221px -538px;
+}
+
+#category-btn-list li:nth-child(15):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -875px;
+}
+
+#category-btn-list li:nth-child(17):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -621px;
+}
+
+#category-btn-list li:nth-child(19):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -221px -915px;
+}
+
+#category-btn-list li:nth-child(21):hover span {
+    background: url('https://static.coupangcdn.com/image/coupang/common/pc_gnb_icon_ver11_C.png') no-repeat -222px -999px;
+}
+
+
+#search-bar {
+    width: 910px;
+    display: flex;
+    align-items: center;
+    padding: 13px;
+    gap: 20px;
+}
+
+#search-bar>a {
+    width: 174px;
+}
+
+#search-bar>a>img {
+    width: 174px;
+    height: 55px;
+}
+
+#search {
+    width: 522px;
+    height: 41px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #6486ec;
+}
+
+#search-category {
+    width: 135px;
+    height: 37px;
+    font-size: 12px;
+    align-content: center;
+    padding-left: 10px;
+    border-right: 1px solid gray;
+    position: relative;
+}
+
+#search-category>li ul {
+    display: none;
+    position: absolute;
+    margin-left: -10px;
+    top: 40px;
+    width: 135px;
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    background: white;
+}
+#category-list>li{
+    padding: 10px 0px 0px 10px;
+}
+
+
+
+#search-category:focus-within #category-list {
+    display: block;
+}
+
+#search input[type="text"] {
+    width: 327px;
+    height: 37px;
+    border: none;
+    outline: none;
+    padding: 2px 8px;
+
+}
+
+#search-button {
+    width: 45px;
+    height: 35px;
+    background: url(./img/search-icon.png)no-repeat center/contain;
+    border: none;
+    cursor: pointer;
+}
+
+#mycoupang {
+    width: 50px;
+    height: 59px;
+    display: flex;
+    flex-direction: column;
+}
+
+#mycoupang-icon {
+    width: 50px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mycoupang img {
+    width: 35px;
+    height: 35px;
+
+}
+
+#mycoupang>a {
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+}
+
+#marketbox {
+    width: 50px;
+    height: 59px;
+    display: flex;
+    flex-direction: column;
+}
+
+#marketbox-icon {
+    width: 50px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#marketbox img {
+    width: 42px;
+    height: 42px;
+
+}
+
+#marketbox>a {
+    width: 50px;
+    height: 15px;
+    font-size: 12px;
+}
+
+/* side-menu */
+#side-menu>ul {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 25px;
+    padding: 0 10px;
+}
+
+#side-menu>ul li {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+#side-menu>ul li>img {
+    width: 20px;
+    height: 20px;
+}
+
+#side-menu li:hover a {
+    text-decoration: underline;
+}
+
+#adImg {
+    width: 1020px;
+    /* 원하는 크기로 조절 */
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #ccc;
+}
+
+#adImg img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#adImg img.active {
+    opacity: 1;
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-layer1is-narrowed {
+    width: 1020px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0px 10px;
+}
+
+.footer-layer1is-narrowed a {
+    font-size: 12px;
+}
+
+.footer-layer1is-narrowed span::after {
+    content: "|";
+    color: black;
+    margin: 0 5px;
+}
+
+.footer-layer2 {
+    padding: 30px 0;
+    width: 1020px;
+    display: flex;
+    font-size: 12px;
+
+}
+.info{
+    padding-left: 10px;
+}
+
+.logo {
+    width: 15%;
+    padding-left: 10px;
+}
+
+.footer-content {
+    width: 85%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-layer3-slide-unit {
+    padding-top: 10px;
+}
+
+
+.footer-layer4 {
+    background: #333333;
+    font-size: 11px;
+    color: #ccc;
+}
+
+.safe-service>span {
+    font-size: 11px;
+}
+.sns-link{
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+#inpang-facebook {
+    background: url(./img/footer_asset_v8.png) no-repeat -222px -30px;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+} 
+#inpang-newsroom{
+    background: url(./img/footer_asset_v8.png) no-repeat -348px -30px;
+	width: 32px;
+	height: 32px;
+    display: inline-block;
+}
+#inpang-instergram{
+    background: url(./img/footer_asset_v8.png) no-repeat -390px -30px;
+	width: 32px;
+	height: 32px;
+    display: inline-block;
+}
